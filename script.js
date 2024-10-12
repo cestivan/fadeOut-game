@@ -60,18 +60,18 @@ const game = () => {
     const winner = document.querySelector(".winner");
     //Checking for a tie
     if (playerChoice === computerChoice) {
-      winner.textContent = "平局";
+      winner.textContent = "Tie";
       return;
     }
     //Check for Rock
     if (playerChoice === "rock") {
-      if (computerChoice === "剪刀") {
-        winner.textContent = "玩家赢";
+      if (computerChoice === "scissors") {
+        winner.textContent = "Player Wins";
         pScore++;
         updateScore();
         return;
       } else {
-        winner.textContent = "电脑赢";
+        winner.textContent = "Computer Wins";
         cScore++;
         updateScore();
         return;
@@ -79,13 +79,13 @@ const game = () => {
     }
     //Check for Paper
     if (playerChoice === "cloth") {
-      if (computerChoice === "剪刀") {
-        winner.textContent = "电脑赢";
+      if (computerChoice === "scissors") {
+        winner.textContent = "Computer Wins";
         cScore++;
         updateScore();
         return;
       } else {
-        winner.textContent = "玩家赢";
+        winner.textContent = "Player Wins";
         pScore++;
         updateScore();
         return;
@@ -93,13 +93,13 @@ const game = () => {
     }
     //Check for Scissors
     if (playerChoice === "scissors") {
-      if (computerChoice === "石头") {
-        winner.textContent = "电脑赢";
+      if (computerChoice === "rock") {
+        winner.textContent = "Computer Wins";
         cScore++;
         updateScore();
         return;
       } else {
-        winner.textContent = "玩家赢";
+        winner.textContent = "Player Wins";
         pScore++;
         updateScore();
         return;
