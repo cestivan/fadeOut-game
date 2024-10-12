@@ -26,7 +26,7 @@ const game = () => {
       });
     });
     //Computer Options
-    const computerOptions = ["石头", "布", "剪刀"];
+    const computerOptions = ["rock", "cloth", "scissors"];
 
     options.forEach(option => {
       option.addEventListener("click", function() {
@@ -64,7 +64,7 @@ const game = () => {
       return;
     }
     //Check for Rock
-    if (playerChoice === "石头") {
+    if (playerChoice === "rock") {
       if (computerChoice === "剪刀") {
         winner.textContent = "玩家赢";
         pScore++;
@@ -78,7 +78,7 @@ const game = () => {
       }
     }
     //Check for Paper
-    if (playerChoice === "布") {
+    if (playerChoice === "cloth") {
       if (computerChoice === "剪刀") {
         winner.textContent = "电脑赢";
         cScore++;
@@ -92,7 +92,7 @@ const game = () => {
       }
     }
     //Check for Scissors
-    if (playerChoice === "剪刀") {
+    if (playerChoice === "scissors") {
       if (computerChoice === "石头") {
         winner.textContent = "电脑赢";
         cScore++;
